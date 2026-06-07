@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-container": "#6063ee", "secondary-container": "#dae2fd", "surface-bright": "#f7f9fb", "secondary-fixed": "#dae2fd", "primary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#2f2ebe", "on-secondary": "#ffffff", "on-surface-variant": "#464554", tertiary: "#4f5f76", "on-secondary-fixed-variant": "#3f465c", "on-secondary-fixed": "#131b2e", "on-primary-fixed": "#07006c", "surface-dim": "#d8dadc", surface: "#f7f9fb", "surface-container": "#eceef0", "inverse-primary": "#c0c1ff", "inverse-on-surface": "#eff1f3", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "on-tertiary-container": "#000510", "on-background": "#191c1e", "surface-tint": "#494bd6", "on-error-container": "#93000a", "on-error": "#ffffff", "outline-variant": "#c7c4d7", "on-tertiary-fixed-variant": "#38485d", outline: "#767586", background: "#f7f9fb", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "on-tertiary-fixed": "#0b1c30", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#bec6e0", "tertiary-container": "#68788f", "primary-fixed-dim": "#c0c1ff", "on-surface": "#191c1e", "tertiary-fixed-dim": "#b7c8e1", "surface-container-low": "#f2f4f6", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", primary: "#4648d4", "on-secondary-container": "#5c647a", error: "#ba1a1a", "surface-variant": "#e0e3e5", secondary: "#565e74", "tertiary-fixed": "#d3e4fe"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {unit: "4px", "stack-sm": "8px", "container-padding-desktop": "32px", "stack-lg": "24px", gutter: "24px", "card-gap": "20px", "stack-md": "16px", "container-padding-mobile": "16px"}, fontFamily: {"label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "28px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ai-gradient-border {
+            position: relative;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+        .ai-gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            background: linear-gradient(to right, #4648d4, #6063ee);
+            border-radius: 9px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-40 bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-container-padding-desktop">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">AuraFlow AI</span>
+</div>
+<div class="hidden md:flex gap-stack-lg items-center h-full">
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors px-stack-sm h-full flex items-center" href="../features_content_ai/code.html">Product</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md h-full flex items-center" href="../about_us_content_ai/code.html">About Us</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors px-stack-sm h-full flex items-center" href="../about_us_content_ai/code.html">Careers</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors px-stack-sm h-full flex items-center" href="../help_center_content_ai/code.html">Resources</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile avatar" data-alt="A professional headshot of a diverse woman with a confident expression, set against a soft-focus office background with modern aesthetic. The lighting is warm and natural, creating a welcoming B2B SaaS atmosphere. The image uses a clean, high-contrast style that aligns with a minimalist enterprise design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy60b0iw6aByXAUF-oWskgBwx1TZmnmbAotSy9GsZ38Av0bCmEC1tC0BR-5OaonuvjnDwezPvuhDyYiyoqr2ruZt-g-3pg4j4zog3cvXoWfHNHobsYCtNzRMSA5lKA1d7RjpYxxCqoOm8kJtOcL97DD4fii7_3ss3VmNadJVO6roDx7QJyKVzz-tB3DFZ1x0MBvIXf6GkNDwYbrsbU0THLcBAqxTQaJshSgXdGltAgHkAYngEzfpEfEsBtezBga5kgjUWnvlxlFsrJ"/>
+</div>
+</div>
+</nav>
+<main class="mt-16">
+<!-- Hero: Brand Story & Mission -->
+<section class="relative py-20 px-container-padding-desktop bg-surface-container-lowest overflow-hidden">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-[14px]" data-icon="auto_awesome">auto_awesome</span>
+                        OUR MISSION
+                    </div>
+<h1 class="font-headline-lg text-headline-lg mb-6 leading-tight">Democratizing AI-driven content orchestration.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        At AuraFlow AI, we believe high-performance content shouldn't be reserved for elite creative houses. We're building the infrastructure that empowers every enterprise to harmonize their digital presence through quiet intelligence and precise AI orchestration.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md flex items-center gap-2 transition-transform active:scale-95 border-t border-white/20">
+                            View Brand Story
+                        </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="aspect-square w-full rounded-xl overflow-hidden border border-outline-variant relative">
+<img class="w-full h-full object-cover" data-alt="An abstract digital artwork representing data flow and intelligence, featuring soft violet and indigo light streaks converging in a central focal point. The composition is minimalist and spacious, suggesting technological sophistication and clarity. High-key lighting creates a clean light-mode aesthetic that resonates with an authoritative B2B SaaS environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg-JIfJxI4mJMbTRc3ZQTBgmUfXO4AkPJKM94eFVdULGgLJJWDrWx4m7xtE492G8qmmlpIG-qaIhvi9jDS6kFviY2jHqWdsunUxA7nY5CtfoJxul3eOjmRwBeCzyvMBOsJXoRchvMI7f02SVDBjcsepnvDRHMsQouAUjtz0rxbDR2XamGZEtydrDKrGizVIhTWLNkQsUMCzpRrGsKtxw-IDm487dFPoRUGAAt9rq4HPLenOOhFen2CBrXRB8WR-Qx_MuHb0OMbohDE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container/50 to-transparent"></div>
+</div>
+<!-- AI Assist Floating Element -->
+<div class="absolute -bottom-6 -left-6 ai-gradient-border p-6 shadow-xl max-w-[240px]">
+<p class="font-label-md text-label-md text-primary mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="psychology">psychology</span>
+                            AI Insight
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">"Content orchestration reduces production cycle time by 42% on average."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section: Bento Grid -->
+<section class="py-24 px-container-padding-desktop">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md mb-4">Guided by Core Values</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Building the future of content with mathematical harmony.</p>
+</div>
+<div class="bento-grid">
+<!-- Innovation -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 hover:shadow-lg transition-shadow">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl" data-icon="bolt">bolt</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Innovation</h3>
+<p class="text-on-surface-variant font-body-md">We don't just follow trends; we define them. Our research lab focuses on generative models that understand brand nuance, ensuring every output feels human, yet powered by machine scale.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of an advanced circuit board glowing with subtle purple and blue LED lights, representing deep innovation and technical precision. The image is captured with a shallow depth of field, emphasizing high-end hardware. The aesthetic is clean, technological, and minimalist, using the brand colors to create visual continuity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQyHaGU61h_46jIps_upd5txwLd6Nb7ouJRpUOezy1FSQpSOyMua-gpTFCPxnCNMRioWfT_GPDlJRaeau0Gv9WtUcdzmb3X8PXOEm1Gwr121iaWlbXwchJXC1X_S_qy4sjypFIskl9Ju1w2wK5AxJ5lXMP8Fh91MGjoMmJKCAhT03uD9RcBrlBoOPrdxJWkX2jKrs20PALX_1MkDgleUnA-FPoisu6qo9KEBTMZQC4chImXsDl16QoQEE3jS52I1PwKLAkN1zEIdaZ"/>
+</div>
+</div>
+</div>
+<!-- Precision -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl" data-icon="ads_click">ads_click</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Precision</h3>
+<p class="text-on-surface-variant font-body-md">In content, a single word can change the sentiment. We prioritize accuracy and brand alignment over sheer volume, every time.</p>
+</div>
+<!-- Scale -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl" data-icon="grid_view">grid_view</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Scale</h3>
+<p class="text-on-surface-variant font-body-md">Enterprise solutions require enterprise scale. Our infrastructure is designed to handle millions of assets across global regions simultaneously.</p>
+</div>
+<!-- Identity -->
+<div class="col-span-12 md:col-span-8 bg-primary-container text-on-primary-container rounded-xl p-8 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md mb-4">Technologically Advanced, Human Centered.</h3>
+<p class="font-body-lg text-body-lg opacity-90 max-w-lg">We bridge the gap between complex algorithmic processing and intuitive creative direction.</p>
+<div class="mt-8 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-white/10 text-label-sm font-label-md border border-white/20">B2B SaaS</span>
+<span class="px-3 py-1 rounded-full bg-white/10 text-label-sm font-label-md border border-white/20">AI Orchestration</span>
+<span class="px-3 py-1 rounded-full bg-white/10 text-label-sm font-label-md border border-white/20">Content Strategy</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 px-container-padding-desktop bg-surface-container-low">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md mb-4">Meet the Orchestrators</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A diverse team of engineers, linguists, and designers building the future of digital expression.</p>
+</div>
+<button class="border border-outline text-on-surface px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                        Join the Team
+                    </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-card-gap">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="aspect-[4/5] bg-white border border-outline-variant rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional portrait of a man with a confident, approachable demeanor, styled as a Chief Technology Officer in a high-tech environment. The lighting is soft and professional, using a minimalist corporate style with neutral backgrounds. The image conveys a sense of quiet intelligence and technological leadership suitable for a B2B SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJPmBwJZRCXDM41rEx5KytP4hvn7mSvFaKBi6qPzDP8TssUTObCDOKVORdhSUP5mPmDj8EP8J9J2ypxR5C61qhoUkx_7MNW2T9nTTQ_PND_2m3DNc0RVd-4fySIuL9vXzanCkMznymdPHf_mdvFSC6U-lnluXw4dmhcFQ-mJf0oQ_cEsjDbYj5Eram6umCXTHYmDFsaj_O0cnIhtjKtePnIrE82mHADHX1QOUsFW3Hp3cboqBUo_tG3laM1_fGTqGrj_DXY9mOh4G"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Alex Rivera</h4>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2">CEO &amp; Founder</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Former Lead of Generative AI at Nexus Systems.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="aspect-[4/5] bg-white border border-outline-variant rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional headshot of a female leader with a visionary expression, representing a Head of Product for an AI company. She is set in a modern, brightly lit architectural space that feels clean and authoritative. The color palette is composed of soft whites and deep slates, maintaining a high-end minimalist B2B aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURm31D9c-i39bTaQJXSkZc0pCrCV_7JGambyaor0Mira2n5wvZ_UhI9uZKDS6ux-1b7ADD66ViVtBCCxCHVy9hHld6Rw_eYpR7EXwCamRAZAuHt2HinjPaBiyGnq9GJB3IeGT70sMjjJTRuUIXTXAF58y_qfwsc2C5r727VnpC5X1y7b9lLJ5-4tzQ5bOjBjrwzeLCEluXPElAdWMNoxzlwzEbdn4ve9Fvd45G5B8G3sf2iMWObGprt4UhA8Z0NaMbnpsHaYNXYOq"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Sarah Chen</h4>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2">Head of Product</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Specialist in Human-Computer Interaction.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="aspect-[4/5] bg-white border border-outline-variant rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A portrait of a male engineer in a clean, modern workspace, focusing on a sense of technical expertise and calm. The lighting is crisp and the background is a blurred office with glass partitions. The visual style is professional, minimalist, and authoritative, fitting for an enterprise SaaS team section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBijaaztTLEIxWRmutMviXoyFm9DH4HxKZTRLZ6mniyQrvhhBLs8enq7FZRnGWLTMPaUltTXBNrJKIsWUcnYJ_DncKmlB4GjR3rPAF6vIsDV0xlLeylcOJ67GJw6SkvXQWcvk_-td6dJ1RPf5VHcb-bsWhxS9mWDDS3WlJkMNbgQVC1_mpvcrm5gZCsygBSALXOvU1bWGx2O_EykWTl0Y_KxwSJNSe8qqOkCvfmWdc4ApCaMygmcEjmW6JWc6y3_XEsiZ5CP2Ag4AmD"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Marcus Thorne</h4>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2">Chief Engineer</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Distributed systems expert and open-source contributor.</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="aspect-[4/5] bg-white border border-outline-variant rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional headshot of a woman representing a Director of Design, showcasing a mix of creative vision and corporate professionalism. She is positioned against a neutral, high-key background that emphasizes clarity and modern style. The image uses soft studio lighting and aligns with a sophisticated B2B SaaS brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoWWqs1FTWOVbCzzffmf0FIaB2z8ujU1FgH5RQwJsE99Cbp2Jq6BI8tWBQvQiG_-7qv0B8E4qv9NlyR8jrAmsPQ2QGK5ScZ9f0rHWNd8SjXyyDAO7ON8ovP42P9VpC21OdrPiVGWfJ08r3k3kp4v6F_xPoSs_FVrjnOt_4C0R_8763sR3_KehouXvW34axobF2_l4DgBnZZPozG7C_DlZbZzm1zhcAIFx6qYP4MOGI7k_ol8UVv1FiCJUxnplqcBoU3vPCh-Oymg_2"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Elena Vogt</h4>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2">Director of Design</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Defining the visual language of AI orchestration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-container-padding-desktop bg-surface">
+<div class="max-w-4xl mx-auto text-center border border-outline-variant rounded-2xl p-12 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-container"></div>
+<h2 class="font-headline-md text-headline-md mb-6">Ready to scale your content intelligence?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">Join the global reach of enterprises already orchestrating their future with AuraFlow AI.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md transition-all hover:shadow-lg active:scale-95">Get Started Today</button>
+<button class="border border-outline text-on-surface px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">Speak to Sales</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high py-12 px-container-padding-desktop">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<span class="text-headline-sm font-bold text-primary mb-4 block">AuraFlow AI</span>
+<p class="text-on-surface-variant font-body-md">Precision orchestration for the modern enterprise.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4">Platform</h5>
+<ul class="space-y-2 text-on-surface-variant font-body-md">
+<li><a class="hover:text-primary" href="../features_content_ai/code.html">Scheduler</a></li>
+<li><a class="hover:text-primary" href="../features_content_ai/code.html">Analytics</a></li>
+<li><a class="hover:text-primary" href="#">AI Assistant</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4">Company</h5>
+<ul class="space-y-2 text-on-surface-variant font-body-md">
+<li><a class="hover:text-primary" href="../about_us_content_ai/code.html">About Us</a></li>
+<li><a class="hover:text-primary" href="../about_us_content_ai/code.html">Careers</a></li>
+<li><a class="hover:text-primary" href="../privacy_policy_content_ai/code.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-4">Contact</h5>
+<ul class="space-y-2 text-on-surface-variant font-body-md">
+<li><a class="hover:text-primary" href="../contact_us_content_ai/code.html">Support</a></li>
+<li><a class="hover:text-primary" href="#">Press</a></li>
+<li><a class="hover:text-primary" href="../contact_us_content_ai/code.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-on-surface-variant">Â© 2024 AuraFlow AI. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for hover states
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.filter = 'brightness(1.1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.filter = 'brightness(1)';
+            });
+        });
+
+        // Sticky Navbar subtle shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+                nav.classList.add('bg-white/90');
+                nav.classList.add('backdrop-blur-md');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.remove('bg-white/90');
+                nav.classList.remove('backdrop-blur-md');
+            }
+        });
+    </script>
+<style id="aura-hosted-site-styles">
+  .aura-site-map {
+    border-top: 1px solid #c7c4d7;
+    background: #ffffff;
+    color: #191c1e;
+    padding: 28px 24px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .aura-site-map__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .aura-site-map strong {
+    color: #4648d4;
+    font-size: 16px;
+  }
+  .aura-site-map nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .aura-site-map a {
+    color: #464554;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .aura-site-map a:hover {
+    color: #4648d4;
+    text-decoration: underline;
+  }
+</style>
+<section class="aura-site-map" aria-label="Website page links">
+  <div class="aura-site-map__inner">
+    <strong>AuraFlow AI</strong>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../features_content_ai/code.html">Features</a>
+      <a href="../pricing_content_ai/code.html">Pricing</a>
+      <a href="../about_us_content_ai/code.html">About Us</a>
+      <a href="../contact_us_content_ai/code.html">Contact Us</a>
+      <a href="../help_center_content_ai/code.html">Help Center</a>
+      <a href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+      <a href="../terms_of_service_content_ai/code.html">Terms of Service</a>
+    </nav>
+  </div>
+</section>
+<script id="aura-hosted-site-router">
+(function () {
+  const routes = {"Home":"../index.html","Features":"../features_content_ai/code.html","Pricing":"../pricing_content_ai/code.html","About Us":"../about_us_content_ai/code.html","Contact Us":"../contact_us_content_ai/code.html","Help Center":"../help_center_content_ai/code.html","Privacy Policy":"../privacy_policy_content_ai/code.html","Terms of Service":"../terms_of_service_content_ai/code.html"};
+  const aliases = [
+    [/^(home|logo|auraflow ai|lumina ai)$/i, 'Home'],
+    [/features?|product|products?|solutions?|ai studio|analytics|integrations|dashboard|scheduler|content library|security/i, 'Features'],
+    [/pricing|billing|plans?|enterprise/i, 'Pricing'],
+    [/about|company|careers|blog/i, 'About Us'],
+    [/contact|support|sales|maps|legal|dpo/i, 'Contact Us'],
+    [/help|resources|documentation|docs|api reference|quick start|community|release notes|articles?/i, 'Help Center'],
+    [/privacy/i, 'Privacy Policy'],
+    [/terms/i, 'Terms of Service']
+  ];
+
+  function routeFor(text) {
+    const normalized = (text || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return null;
+    for (const [pattern, route] of aliases) {
+      if (pattern.test(normalized)) return routes[route];
+    }
+    return null;
+  }
+
+  document.querySelectorAll('a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href && href !== '#') return;
+    const route = routeFor(link.textContent || link.getAttribute('aria-label'));
+    if (route) link.setAttribute('href', route);
+  });
+
+  document.querySelectorAll('button').forEach((button) => {
+    const route = routeFor(button.textContent || button.getAttribute('aria-label'));
+    if (!route || button.dataset.auraRouteBound) return;
+    button.dataset.auraRouteBound = 'true';
+    button.addEventListener('click', () => {
+      window.location.href = route;
+    });
+  });
+}());
+</script>
+</body></html>
+

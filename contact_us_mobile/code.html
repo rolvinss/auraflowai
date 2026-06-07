@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connect with Intelligence | Lumina AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#38485d", "on-primary-container": "#fffbff", "surface-dim": "#d8dadc", "on-primary-fixed-variant": "#2f2ebe", "on-tertiary-container": "#000510", error: "#ba1a1a", "on-primary-fixed": "#07006c", "on-background": "#191c1e", background: "#f7f9fb", primary: "#4648d4", "on-surface-variant": "#464554", "tertiary-fixed": "#d3e4fe", "on-secondary-fixed-variant": "#3f465c", "on-secondary": "#ffffff", "on-surface": "#191c1e", "secondary-fixed": "#dae2fd", outline: "#767586", "on-error-container": "#93000a", "surface-tint": "#494bd6", surface: "#f7f9fb", "on-secondary-container": "#5c647a", "inverse-primary": "#c0c1ff", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "inverse-on-surface": "#eff1f3", "surface-container-low": "#f2f4f6", "primary-fixed-dim": "#c0c1ff", "tertiary-fixed-dim": "#b7c8e1", secondary: "#565e74", "surface-variant": "#e0e3e5", "primary-fixed": "#e1e0ff", "inverse-surface": "#2d3133", "on-primary": "#ffffff", "on-error": "#ffffff", "surface-bright": "#f7f9fb", "secondary-container": "#dae2fd", "on-tertiary": "#ffffff", "primary-container": "#6063ee", "surface-container": "#eceef0", "surface-container-highest": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-container-high": "#e6e8ea", "outline-variant": "#c7c4d7", "tertiary-container": "#68788f", "error-container": "#ffdad6", tertiary: "#4f5f76"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"stack-md": "16px", "card-gap": "20px", gutter: "24px", "container-padding-desktop": "32px", unit: "4px", "stack-sm": "8px", "container-padding-mobile": "16px", "stack-lg": "24px"}, fontFamily: {"label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "label-sm": ["JetBrains Mono"], "body-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "headline-sm": ["18px", {lineHeight: "28px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .ai-gradient-border {
+            position: relative;
+            background: #fff;
+            background-clip: padding-box;
+            border: 1px solid transparent;
+        }
+        .ai-gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #4648d4, #6063ee);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-between px-container-padding-mobile h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Lumina AI</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]" data-icon="person">person</span>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-stack-lg px-container-padding-mobile">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Connect with Intelligence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Experience the future of B2B orchestration. Our team is ready to scale your operations.</p>
+</section>
+<!-- Form Section -->
+<section class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl overflow-hidden mb-stack-lg">
+<!-- Tabs -->
+<div class="flex border-b border-outline-variant/30">
+<button class="flex-1 py-4 text-center font-label-md text-label-md border-b-2 border-primary text-primary transition-colors" id="tab-sales" onclick="switchTab('sales')">
+                    SALES
+                </button>
+<button class="flex-1 py-4 text-center font-label-md text-label-md border-b-2 border-transparent text-on-surface-variant transition-colors" id="tab-support" onclick="switchTab('support')">
+                    TECHNICAL SUPPORT
+                </button>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">FULL NAME</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none bg-surface transition-all" placeholder="e.g. Alex Rivera" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">WORK EMAIL</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none bg-surface transition-all" placeholder="alex@company.ai" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">SUBJECT</label>
+<div class="relative">
+<select class="w-full h-12 px-4 appearance-none rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none bg-surface transition-all">
+<option>Enterprise Licensing</option>
+<option>API Integration</option>
+<option>Custom AI Training</option>
+<option>General Inquiry</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-3 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">MESSAGE</label>
+<textarea class="w-full p-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none bg-surface transition-all resize-none" placeholder="How can we help your orchestration workflow?" rows="4"></textarea>
+</div>
+<button class="w-full h-14 bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-sm relative overflow-hidden group">
+<span class="relative z-10">Send Message</span>
+<span class="material-symbols-outlined relative z-10" data-icon="send">send</span>
+<div class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</button>
+<div class="ai-gradient-border p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">AI-Assisted routing ensures your inquiry reaches the right specialist in &lt;5 mins.</p>
+</div>
+</div>
+</section>
+<!-- Contact Details -->
+<section class="grid grid-cols-1 gap-4 mb-stack-lg">
+<div class="bg-surface-container-high p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Support Hub</h3>
+<p class="font-body-md text-body-md text-primary font-semibold">support@lumina-ai.io</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">24/7 technical monitoring for enterprise clusters.</p>
+</div>
+<div class="bg-surface-container-high p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Headquarters</h3>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Innovation Quarter, San Francisco</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">44 Montgomery St, Suite 300, CA 94104</p>
+</div>
+</section>
+<!-- Simplified Map -->
+<section class="rounded-xl overflow-hidden h-48 relative border border-outline-variant/50 shadow-sm">
+<img class="w-full h-full object-cover grayscale opacity-80 contrast-125" data-alt="A stylized, minimalist architectural map visualization of San Francisco's downtown financial district. The aesthetic is modern and tech-focused, using a high-contrast palette of slate grays, vibrant indigo highlights, and soft white backgrounds. The lighting is crisp and uniform, evoking a professional B2B software interface. Subtle glowing nodes indicate key infrastructure points in a clean, developer-friendly layout." data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCvWHCM0ZHIkaXdoPQatNXsNzLmn5AX52XBUcuzfAF0jdkL5FSUoMkM_IaKRB5_eU4Kc6ufO-J9W0jIQb4PEgnYF_Fif8mtAxrkE6eyJLhODYYEWTylPeyi7YDaVVsAzK_sTq7KQuXMLv7XwzOwG-BLBNrfjWHOy-ZaN2Q_rAcP3E6CwGfK0u7ZELqlvQWt6q4RVhlHESVThxozQ0p_MhTWaWwXlAX9JPQXaAjcTDJg6Hcjbc5Ys5JHF1-eNZRJHLjo5dpX4rWofcB"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg border-4 border-white animate-pulse">
+<span class="material-symbols-outlined text-white" data-icon="hub" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur px-3 py-1 rounded-full border border-outline-variant/30 shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface">MAP VIEW: SF HEADQUARTERS</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/50 flex flex-col gap-stack-lg px-container-padding-mobile py-stack-lg w-full">
+<div class="flex flex-col gap-4">
+<div class="font-label-md text-label-md font-bold uppercase tracking-widest text-on-surface">LUMINA AI</div>
+<div class="flex flex-wrap gap-x-6 gap-y-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="../features_content_ai/code.html">Product</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="../features_content_ai/code.html">Solutions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="../pricing_content_ai/code.html">Pricing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors underline" href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+</div>
+</div>
+<div class="text-on-surface-variant font-body-md text-body-md">
+            Â© 2024 Lumina AI Orchestration. All rights reserved.
+        </div>
+</footer>
+<script>
+        function switchTab(type) {
+            const salesTab = document.getElementById('tab-sales');
+            const supportTab = document.getElementById('tab-support');
+            
+            if (type === 'sales') {
+                salesTab.classList.add('border-primary', 'text-primary');
+                salesTab.classList.remove('border-transparent', 'text-on-surface-variant');
+                supportTab.classList.add('border-transparent', 'text-on-surface-variant');
+                supportTab.classList.remove('border-primary', 'text-primary');
+            } else {
+                supportTab.classList.add('border-primary', 'text-primary');
+                supportTab.classList.remove('border-transparent', 'text-on-surface-variant');
+                salesTab.classList.add('border-transparent', 'text-on-surface-variant');
+                salesTab.classList.remove('border-primary', 'text-primary');
+            }
+        }
+
+        // Simple parallax effect for map
+        window.addEventListener('scroll', () => {
+            const map = document.querySelector('section img');
+            if(map) {
+                const speed = 0.05;
+                const rect = map.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                    const offset = (window.innerHeight - rect.top) * speed;
+                    map.style.transform = `translateY(${offset}px) scale(1.1)`;
+                }
+            }
+        });
+    </script>
+<style id="aura-hosted-site-styles">
+  .aura-site-map {
+    border-top: 1px solid #c7c4d7;
+    background: #ffffff;
+    color: #191c1e;
+    padding: 28px 24px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .aura-site-map__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .aura-site-map strong {
+    color: #4648d4;
+    font-size: 16px;
+  }
+  .aura-site-map nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .aura-site-map a {
+    color: #464554;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .aura-site-map a:hover {
+    color: #4648d4;
+    text-decoration: underline;
+  }
+</style>
+<section class="aura-site-map" aria-label="Website page links">
+  <div class="aura-site-map__inner">
+    <strong>AuraFlow AI</strong>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../features_content_ai/code.html">Features</a>
+      <a href="../pricing_content_ai/code.html">Pricing</a>
+      <a href="../about_us_content_ai/code.html">About Us</a>
+      <a href="../contact_us_content_ai/code.html">Contact Us</a>
+      <a href="../help_center_content_ai/code.html">Help Center</a>
+      <a href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+      <a href="../terms_of_service_content_ai/code.html">Terms of Service</a>
+    </nav>
+  </div>
+</section>
+<script id="aura-hosted-site-router">
+(function () {
+  const routes = {"Home":"../index.html","Features":"../features_content_ai/code.html","Pricing":"../pricing_content_ai/code.html","About Us":"../about_us_content_ai/code.html","Contact Us":"../contact_us_content_ai/code.html","Help Center":"../help_center_content_ai/code.html","Privacy Policy":"../privacy_policy_content_ai/code.html","Terms of Service":"../terms_of_service_content_ai/code.html"};
+  const aliases = [
+    [/^(home|logo|auraflow ai|lumina ai)$/i, 'Home'],
+    [/features?|product|products?|solutions?|ai studio|analytics|integrations|dashboard|scheduler|content library|security/i, 'Features'],
+    [/pricing|billing|plans?|enterprise/i, 'Pricing'],
+    [/about|company|careers|blog/i, 'About Us'],
+    [/contact|support|sales|maps|legal|dpo/i, 'Contact Us'],
+    [/help|resources|documentation|docs|api reference|quick start|community|release notes|articles?/i, 'Help Center'],
+    [/privacy/i, 'Privacy Policy'],
+    [/terms/i, 'Terms of Service']
+  ];
+
+  function routeFor(text) {
+    const normalized = (text || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return null;
+    for (const [pattern, route] of aliases) {
+      if (pattern.test(normalized)) return routes[route];
+    }
+    return null;
+  }
+
+  document.querySelectorAll('a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href && href !== '#') return;
+    const route = routeFor(link.textContent || link.getAttribute('aria-label'));
+    if (route) link.setAttribute('href', route);
+  });
+
+  document.querySelectorAll('button').forEach((button) => {
+    const route = routeFor(button.textContent || button.getAttribute('aria-label'));
+    if (!route || button.dataset.auraRouteBound) return;
+    button.dataset.auraRouteBound = 'true';
+    button.addEventListener('click', () => {
+      window.location.href = route;
+    });
+  });
+}());
+</script>
+</body></html>
+

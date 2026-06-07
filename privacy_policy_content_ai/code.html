@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-container": "#6063ee", "secondary-container": "#dae2fd", "surface-bright": "#f7f9fb", "secondary-fixed": "#dae2fd", "primary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#2f2ebe", "on-secondary": "#ffffff", "on-surface-variant": "#464554", tertiary: "#4f5f76", "on-secondary-fixed-variant": "#3f465c", "on-secondary-fixed": "#131b2e", "on-primary-fixed": "#07006c", "surface-dim": "#d8dadc", surface: "#f7f9fb", "surface-container": "#eceef0", "inverse-primary": "#c0c1ff", "inverse-on-surface": "#eff1f3", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "on-tertiary-container": "#000510", "on-background": "#191c1e", "surface-tint": "#494bd6", "on-error-container": "#93000a", "on-error": "#ffffff", "outline-variant": "#c7c4d7", "on-tertiary-fixed-variant": "#38485d", outline: "#767586", background: "#f7f9fb", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "on-tertiary-fixed": "#0b1c30", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#bec6e0", "tertiary-container": "#68788f", "primary-fixed-dim": "#c0c1ff", "on-surface": "#191c1e", "tertiary-fixed-dim": "#b7c8e1", "surface-container-low": "#f2f4f6", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", primary: "#4648d4", "on-secondary-container": "#5c647a", error: "#ba1a1a", "surface-variant": "#e0e3e5", secondary: "#565e74", "tertiary-fixed": "#d3e4fe"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {unit: "4px", "stack-sm": "8px", "container-padding-desktop": "32px", "stack-lg": "24px", gutter: "24px", "card-gap": "20px", "stack-md": "16px", "container-padding-mobile": "16px"}, fontFamily: {"label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "28px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        body { background-color: #f7f9fb; font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .privacy-content-card { border: 1px solid #E2E8F0; background-color: #ffffff; }
+        .scroll-margin { scroll-margin-top: 100px; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-40 bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-container-padding-desktop w-full">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">AuraFlow AI</span>
+</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg cursor-pointer" href="../features_content_ai/code.html">Dashboard</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg cursor-pointer" href="../features_content_ai/code.html">Scheduler</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg cursor-pointer" href="../features_content_ai/code.html">Content Library</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low">help</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low">settings</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="A clean, professional headshot avatar for a software interface user, featuring minimalist line art and a soft color palette of grays and muted blues. The style is modern and high-tech, fitting for a B2B SaaS platform focused on artificial intelligence and data orchestration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtBecXxAU5CPQIPAeHaU7NUEYG9QZWwiP-wkEx8VTPKaPHIdJQBQWCWicaY4mew9NyJzwEW4CQRW9Ps_uyy3fYudYnJ5eIBJTQew5OX3ivKrjkOtN_BPRxnhkA0tZ7F2Pqa3A1pGCtXlnNxQpCfsv8bt-He4ew8itjnVVNf8YnDtimDvc-Dt1fBGnZjZsoq7bxEPynwOkGoVBdwKKzbw7m_hNVuRrXPcZrcQzkymH_BKfEiFahRhlZGTDVGqGMc7YMCds_tPv1PEy6"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto flex flex-col md:flex-row gap-gutter">
+<!-- Sticky Table of Contents -->
+<aside class="hidden md:block w-64 shrink-0">
+<div class="sticky top-24 space-y-stack-md">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-outline mb-stack-md">Navigation</h3>
+<nav class="flex flex-col gap-unit">
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#introduction">Introduction</a>
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#collect">Information We Collect</a>
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#use">How We Use Your Data</a>
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#security">Data Security</a>
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#rights">Your Rights</a>
+<a class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" href="#cookies">Cookies Policy</a>
+</nav>
+<div class="mt-stack-lg p-stack-md bg-primary-fixed rounded-xl border border-primary-container/20">
+<p class="font-label-md text-label-md text-on-primary-fixed mb-1">Need help?</p>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant mb-stack-md">Contact our data protection officer for queries.</p>
+<button class="w-full py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">Contact DPO</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 space-y-stack-lg">
+<!-- Header Section -->
+<header class="privacy-content-card rounded-xl p-stack-lg md:p-10 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'wght' 100;">policy</span>
+</div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full mb-stack-md">Last Updated: October 24, 2023</span>
+<h1 class="font-headline-lg text-headline-lg md:text-headline-lg text-on-surface mb-stack-md">Privacy Policy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        At AuraFlow AI, we prioritize the protection of your intellectual property and personal data. This policy outlines our commitment to transparency and security in our AI-driven orchestration ecosystem.
+                    </p>
+</div>
+</header>
+<!-- Policy Sections -->
+<section class="privacy-content-card rounded-xl p-stack-lg md:p-10 scroll-margin" id="introduction">
+<div class="flex items-start gap-stack-md mb-stack-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Introduction</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-4">
+<p>This Privacy Policy describes how Global Reach Corp ("we," "us," or "our") collects, uses, and shares information in connection with your use of the AuraFlow AI platform. By accessing our services, you agree to the practices described herein.</p>
+<p>Our goal is to provide a technologically advanced environment where data privacy is baked into the architecture, ensuring that your enterprise content remains yours.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="privacy-content-card rounded-xl p-stack-lg md:p-10 scroll-margin" id="collect">
+<div class="flex items-start gap-stack-md mb-stack-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+</div>
+<div class="w-full">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Information We Collect</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">We collect information to provide better services to all our usersâ€”from figuring out basic stuff like which language you speak, to more complex things like which content orchestration patterns you prefer.</p>
+<div class="grid md:grid-cols-2 gap-stack-lg">
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<h4 class="font-label-md text-label-md text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">person</span> Direct Identifiers
+                                </h4>
+<ul class="font-body-md text-body-md text-on-surface-variant list-disc pl-5 space-y-1">
+<li>Full name and job title</li>
+<li>Professional email address</li>
+<li>Organization name and size</li>
+<li>Billing and payment details</li>
+</ul>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<h4 class="font-label-md text-label-md text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">psychology</span> AI Training Data
+                                </h4>
+<ul class="font-body-md text-body-md text-on-surface-variant list-disc pl-5 space-y-1">
+<li>Content submitted for orchestration</li>
+<li>User-defined style guides</li>
+<li>Feedback on AI-generated outputs</li>
+<li>Custom prompt libraries</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="privacy-content-card rounded-xl p-stack-lg md:p-10 scroll-margin" id="use">
+<div class="flex items-start gap-stack-md mb-stack-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">How We Use Your Data</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-4">
+<p>We use the information we collect to operate, maintain, and improve our services, and to develop new AI capabilities. Specifically:</p>
+<div class="space-y-stack-md mt-stack-md">
+<div class="flex gap-stack-md">
+<span class="font-label-md text-label-md text-primary shrink-0 mt-1">01.</span>
+<p><strong class="text-on-surface">Service Provision:</strong> To create and secure your account, and provide the content orchestration services you request.</p>
+</div>
+<div class="flex gap-stack-md">
+<span class="font-label-md text-label-md text-primary shrink-0 mt-1">02.</span>
+<p><strong class="text-on-surface">Analytics:</strong> To monitor and analyze trends, usage, and activities in connection with our services for business intelligence.</p>
+</div>
+<div class="flex gap-stack-md">
+<span class="font-label-md text-label-md text-primary shrink-0 mt-1">03.</span>
+<p><strong class="text-on-surface">Personalization:</strong> To customize your experience by suggesting content strategies tailored to your organization's voice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="privacy-content-card rounded-xl p-stack-lg md:p-10 scroll-margin" id="security">
+<div class="flex items-start gap-stack-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Data Security</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">We implement industry-standard security measures designed to protect your data from unauthorized access, loss, or alteration. This includes:</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-2">vpn_key</span>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">AES-256 Encryption</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">At rest and in transit.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-2">verified_user</span>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">SOC 2 Type II</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Compliant infrastructure.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-2">hub</span>
+<h5 class="font-label-md text-label-md text-on-surface mb-1">Data Isolation</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Strict tenant separation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="privacy-content-card rounded-xl p-stack-lg md:p-10 scroll-margin" id="rights">
+<div class="flex items-start gap-stack-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">assignment_ind</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Your Rights</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md">Under GDPR and CCPA, you have specific rights regarding your personal information:</p>
+<ul class="space-y-stack-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                The right to access and download your data.
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                The right to correct inaccurate information.
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                The right to request deletion of your data ("Right to be Forgotten").
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                The right to object to automated decision-making.
+                            </li>
+</ul>
+<div class="mt-stack-lg">
+<button class="px-6 py-2 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary/5 transition-all">Download My Data</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant py-stack-lg mt-stack-lg">
+<div class="max-w-7xl mx-auto px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-headline-sm font-bold text-on-surface">AuraFlow AI</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Â© 2023 Global Reach Corp. All rights reserved.</p>
+</div>
+<div class="flex gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="../terms_of_service_content_ai/code.html">Terms of Service</a>
+<a class="font-label-md text-label-md text-primary font-bold" href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="../features_content_ai/code.html">Security</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple smooth scroll behavior for ToC
+        document.querySelectorAll('aside nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active link on scroll
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('aside nav a').forEach((a) => {
+                a.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                a.classList.add('text-on-surface-variant');
+                if (a.getAttribute('href').substring(1) === current) {
+                    a.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    a.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+<style id="aura-hosted-site-styles">
+  .aura-site-map {
+    border-top: 1px solid #c7c4d7;
+    background: #ffffff;
+    color: #191c1e;
+    padding: 28px 24px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .aura-site-map__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .aura-site-map strong {
+    color: #4648d4;
+    font-size: 16px;
+  }
+  .aura-site-map nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .aura-site-map a {
+    color: #464554;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .aura-site-map a:hover {
+    color: #4648d4;
+    text-decoration: underline;
+  }
+</style>
+<section class="aura-site-map" aria-label="Website page links">
+  <div class="aura-site-map__inner">
+    <strong>AuraFlow AI</strong>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../features_content_ai/code.html">Features</a>
+      <a href="../pricing_content_ai/code.html">Pricing</a>
+      <a href="../about_us_content_ai/code.html">About Us</a>
+      <a href="../contact_us_content_ai/code.html">Contact Us</a>
+      <a href="../help_center_content_ai/code.html">Help Center</a>
+      <a href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+      <a href="../terms_of_service_content_ai/code.html">Terms of Service</a>
+    </nav>
+  </div>
+</section>
+<script id="aura-hosted-site-router">
+(function () {
+  const routes = {"Home":"../index.html","Features":"../features_content_ai/code.html","Pricing":"../pricing_content_ai/code.html","About Us":"../about_us_content_ai/code.html","Contact Us":"../contact_us_content_ai/code.html","Help Center":"../help_center_content_ai/code.html","Privacy Policy":"../privacy_policy_content_ai/code.html","Terms of Service":"../terms_of_service_content_ai/code.html"};
+  const aliases = [
+    [/^(home|logo|auraflow ai|lumina ai)$/i, 'Home'],
+    [/features?|product|products?|solutions?|ai studio|analytics|integrations|dashboard|scheduler|content library|security/i, 'Features'],
+    [/pricing|billing|plans?|enterprise/i, 'Pricing'],
+    [/about|company|careers|blog/i, 'About Us'],
+    [/contact|support|sales|maps|legal|dpo/i, 'Contact Us'],
+    [/help|resources|documentation|docs|api reference|quick start|community|release notes|articles?/i, 'Help Center'],
+    [/privacy/i, 'Privacy Policy'],
+    [/terms/i, 'Terms of Service']
+  ];
+
+  function routeFor(text) {
+    const normalized = (text || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return null;
+    for (const [pattern, route] of aliases) {
+      if (pattern.test(normalized)) return routes[route];
+    }
+    return null;
+  }
+
+  document.querySelectorAll('a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href && href !== '#') return;
+    const route = routeFor(link.textContent || link.getAttribute('aria-label'));
+    if (route) link.setAttribute('href', route);
+  });
+
+  document.querySelectorAll('button').forEach((button) => {
+    const route = routeFor(button.textContent || button.getAttribute('aria-label'));
+    if (!route || button.dataset.auraRouteBound) return;
+    button.dataset.auraRouteBound = 'true';
+    button.addEventListener('click', () => {
+      window.location.href = route;
+    });
+  });
+}());
+</script>
+</body></html>
+

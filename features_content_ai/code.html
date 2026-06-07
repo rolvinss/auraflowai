@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuraFlow AI - Features</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-container": "#6063ee", "secondary-container": "#dae2fd", "surface-bright": "#f7f9fb", "secondary-fixed": "#dae2fd", "primary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#2f2ebe", "on-secondary": "#ffffff", "on-surface-variant": "#464554", tertiary: "#4f5f76", "on-secondary-fixed-variant": "#3f465c", "on-secondary-fixed": "#131b2e", "on-primary-fixed": "#07006c", "surface-dim": "#d8dadc", surface: "#f7f9fb", "surface-container": "#eceef0", "inverse-primary": "#c0c1ff", "inverse-on-surface": "#eff1f3", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "on-tertiary-container": "#000510", "on-background": "#191c1e", "surface-tint": "#494bd6", "on-error-container": "#93000a", "on-error": "#ffffff", "outline-variant": "#c7c4d7", "on-tertiary-fixed-variant": "#38485d", outline: "#767586", background: "#f7f9fb", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "on-tertiary-fixed": "#0b1c30", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#bec6e0", "tertiary-container": "#68788f", "primary-fixed-dim": "#c0c1ff", "on-surface": "#191c1e", "tertiary-fixed-dim": "#b7c8e1", "surface-container-low": "#f2f4f6", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", primary: "#4648d4", "on-secondary-container": "#5c647a", error: "#ba1a1a", "surface-variant": "#e0e3e5", secondary: "#565e74", "tertiary-fixed": "#d3e4fe"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {unit: "4px", "stack-sm": "8px", "container-padding-desktop": "32px", "stack-lg": "24px", gutter: "24px", "card-gap": "20px", "stack-md": "16px", "container-padding-mobile": "16px"}, fontFamily: {"label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "28px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .ai-gradient-border {
+            border: 2px solid transparent;
+            background: linear-gradient(to right, white, white), linear-gradient(to right, #4648d4, #6063ee);
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+        }
+        .card-shadow {
+            box-shadow: 0px 1px 3px rgba(15, 23, 42, 0.1);
+        }
+        .card-hover:hover {
+            box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.05);
+            transform: translateY(-2px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-40 bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-container-padding-desktop">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">AuraFlow AI</span>
+<nav class="hidden md:flex ml-stack-lg gap-stack-lg">
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors px-stack-sm py-1 rounded" href="../features_content_ai/code.html">Solutions</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md px-stack-sm py-1" href="../features_content_ai/code.html">Features</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors px-stack-sm py-1 rounded" href="../pricing_content_ai/code.html">Pricing</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="flex items-center bg-surface-container-low rounded-lg px-stack-sm py-1.5 border border-outline-variant">
+<span class="material-symbols-outlined text-outline mr-2 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Search features..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80 transition-opacity">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80 transition-opacity">help</span>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0X-hL6kA1ibck7e8_dVNvSQnm1f2PvnlBRaqSZVmo14KYoxCzs5gRWzE_L8DCJtQzdVoPzh5eB8ki1l21pn8lC-pmW-fjb0JQ91DQ71xB3bWJak-SCLjl5NZMC1vtTRa3Ke56ghjGDAxLV_riiKz_aT1fzYucTC0lKbK5txDTv5zuwxSyXh9usJidp1peQfJwFeBpxHho_RJY9uT5JFOkspY9HJrc-Yc0CfT9_5t5KF_isXtuZOB6o5ZZL1UJryTWdLyFo38oXePq"/>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-[260px] z-50 bg-surface-container-low border-r border-outline-variant flex flex-col py-stack-lg px-stack-md gap-stack-md hidden xl:flex">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<div class="w-10 h-10 bg-primary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">Global Reach Corp</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Plan</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all active:scale-95 duration-150" href="../features_content_ai/code.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all active:scale-95 duration-150" href="../features_content_ai/code.html">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-md text-label-md">Scheduler</span>
+</a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm bg-primary-container text-on-primary-container rounded-lg transition-all active:scale-95 duration-150" href="../features_content_ai/code.html">
+<span class="material-symbols-outlined" data-icon="auto_fix">auto_fix</span>
+<span class="font-label-md text-label-md">Features Deep-Dive</span>
+</a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all active:scale-95 duration-150" href="../features_content_ai/code.html">
+<span class="material-symbols-outlined" data-icon="folder_special">folder_special</span>
+<span class="font-label-md text-label-md">Content Library</span>
+</a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label-md text-label-md">AI Assistant</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 pt-stack-lg border-t border-outline-variant">
+<button class="bg-primary text-on-primary py-stack-sm px-stack-md rounded-lg font-label-md text-label-md mb-stack-md active:scale-95 transition-transform">
+                Create New Post
+            </button>
+<a class="flex items-center gap-stack-md px-stack-md py-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg" href="../pricing_content_ai/code.html">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Billing</span>
+</a>
+<a class="flex items-center gap-stack-md px-stack-md py-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-label-md text-label-md">Switch Org</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="xl:ml-[260px] pt-16 min-h-screen">
+<div class="max-w-[1440px] mx-auto px-container-padding-mobile md:px-container-padding-desktop py-stack-lg">
+<!-- Hero Section -->
+<section class="mb-stack-lg py-12 text-center">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">The Content Orchestration Engine</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    AuraFlow AI unifies every stage of the content lifecycle. From generative ideation to automated distribution, we've built the tools that turn hours of work into seconds.
+                </p>
+<div class="mt-stack-lg flex justify-center gap-stack-md">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-xl shadow-lg active:scale-95 transition-transform flex items-center gap-2">
+                        Start for Free <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md px-6 py-3 rounded-xl hover:bg-surface-container-low transition-colors">
+                        Watch Demo
+                    </button>
+</div>
+</section>
+<!-- Feature 1: AI Studio -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20 items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="inline-flex items-center px-stack-sm py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm mb-stack-md">
+<span class="material-symbols-outlined text-[16px] mr-1" style="font-variation-settings: 'FILL' 1;">auto_fix</span>
+                        GENERATIVE INTELLIGENCE
+                    </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">AI Studio: Creative Without the Friction</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
+                        Our AI Studio doesn't just write text; it orchestrates full-funnel content campaigns. Using proprietary LLM fine-tuning, AuraFlow generates brand-consistent copy, visual assets, and cross-platform variations in a single click.
+                    </p>
+<ul class="space-y-stack-sm mb-stack-lg">
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-body-md text-on-surface"><strong class="font-semibold">Context-Aware Drafting:</strong> AI that knows your brand voice and previous campaign performance.</span>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-body-md text-on-surface"><strong class="font-semibold">Multi-Format Output:</strong> Turn one long-form article into 10 social posts and 3 newsletters instantly.</span>
+</li>
+</ul>
+<div class="ai-gradient-border p-stack-md rounded-xl inline-block">
+<div class="flex items-center gap-stack-sm text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined">lightbulb</span>
+                            AI Tip: "Try 'Create Hook Variations' for 40% higher CTR."
+                        </div>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden card-shadow">
+<img alt="AI Studio Interface" class="w-full h-auto" data-alt="A professional screen mockup of a futuristic AI Studio interface with clean violet accents. The interface shows code-like generation blocks on the left and a live content preview on the right. The lighting is bright and high-key, emphasizing a clean B2B SaaS aesthetic with a focus on productivity and high technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRA7PBA_prN8RcMcI8ZtlRSFn-7FPX2GAYJHlWqTZJ-KjR4F0-hrHaL18wcTgda3evn_QWFi_G2JAVqIvnsqAClNkyhbykRe9UkEtCCTQHsv3BWqGQTq3b_vNOUALFeR6aYNaA9NW94gaWy9obVPMwuo1GgjxZBD8ti8RraaazJcGRedwbGZrbais3hmoR482TkbEiM4PneoPukp7P5brYDfk_WrRzx4ct01S0SPV3yEtdVhvxlKpG2y9SUNsSSfsa_LKcFftJsJkp"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid Section: Analytics & Library -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<!-- Smart Analytics -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl card-shadow card-hover transition-all">
+<div class="flex justify-between items-start mb-stack-lg">
+<div>
+<div class="inline-flex items-center px-stack-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-2">
+                                DATA VISUALIZATION
+                            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Smart Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                                Stop guessing. Our predictive analytics engine identifies which content themes will resonate before you hit publish.
+                            </p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container-low"><span class="material-symbols-outlined text-[20px]">filter_list</span></button>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container-low"><span class="material-symbols-outlined text-[20px]">download</span></button>
+</div>
+</div>
+<!-- Analytics Graphics Simulation -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md mt-6">
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant">
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">REACH SCORE</span>
+<span class="text-headline-sm font-bold text-primary">89.4%</span>
+<div class="h-1 bg-outline-variant rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-primary w-[89%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant">
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">CONVERSION AI</span>
+<span class="text-headline-sm font-bold text-green-600">+12.4%</span>
+<div class="flex items-center gap-1 mt-3">
+<span class="material-symbols-outlined text-green-600 text-[14px]">trending_up</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant">
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">SENTIMENT</span>
+<span class="text-headline-sm font-bold text-tertiary">Positive</span>
+<div class="flex items-center gap-1 mt-3">
+<span class="material-symbols-outlined text-tertiary text-[14px]">face</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">High Engagement</span>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-outline-variant pt-stack-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Top Performing Campaigns</span>
+<a class="text-primary font-label-md text-label-md flex items-center hover:underline" href="../features_content_ai/code.html">View full report <span class="material-symbols-outlined text-[16px] ml-1">open_in_new</span></a>
+</div>
+</div>
+</div>
+<!-- Media Library -->
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl card-shadow flex flex-col">
+<div class="mb-stack-md">
+<span class="material-symbols-outlined text-primary text-[32px]" style="font-variation-settings: 'FILL' 1;">folder_special</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Media Library</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                            Unlimited cloud storage for your assets with AI-auto-tagging.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-2 flex-grow overflow-hidden">
+<div class="aspect-square bg-surface-container rounded-lg relative group">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A crisp, high-resolution photo of a minimalist desk setup with a laptop and coffee. The color palette is neutral with slate and indigo tones. This asset represents the organized media library of a modern B2B SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKhonT3Dmflsoo73LtGTPoN8F0wIiAw5yXQtLUfYgPd8DKRo7PEE4UEcHuO3MdLDg-vqSBYE0fzT8ZB59nplfqm0AfhE0-JaT7_tneAIiUfL9obtd_vKG2m7Ofb_9_uW3UmaxEdffnUYAD2FE9mzgtfm9o9azVldPaoh4yH0ndSxcwXNM26tsNt_63ajcfgmLT9aGK2xa1yjVEeyithRR3uKDp-LZSVOYRxFe7dJznaXtYBqfF0WGW82VFr5xv_zyMcK1xWMUmDH9K"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg relative group">
+<img class="w-full h-full object-cover rounded-lg" data-alt="An abstract background of deep violet and navy blue gradients, smooth and professional. The image suggests high-quality creative assets used within an enterprise content management system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBltcwaFsGu00-HZVcp9pzsshbwVU5If5UyNwtb0M6wQ8Q9xZGYO6sY67jk5blmnCHT00tgAW7LOwkQXq1i9qNSgCdFyXSv8sau1CbNJ-bkXM7KWENqr4knRLciQjxSfIfU1lJmxIEbc3BWnmfeHGc7F1BkdoAXEO42TfSp-gFJctnjveN824gpibI62JWDD5dr3TKKXC1R2heDmgeVXjRHfvMlS2EYRkTmGumnAvRTOKQE2gBi9_7jNtGNZ4aXRWrdGIiv6yxkdRSn"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-high rounded-lg flex items-center justify-center border-2 border-dashed border-outline-variant">
+<span class="material-symbols-outlined text-outline">add</span>
+</div>
+</div>
+<button class="mt-stack-lg w-full py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors">
+                        Manage All Assets
+                    </button>
+</div>
+</section>
+<!-- Feature 3: Unified Calendar -->
+<section class="mb-20">
+<div class="text-center mb-12">
+<div class="inline-flex items-center px-stack-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm mb-stack-md">
+<span class="material-symbols-outlined text-[16px] mr-1">calendar_month</span>
+                        VISUAL SCHEDULING
+                    </div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Unified Calendar: One View for Everything</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">
+                        Drag and drop your content across platforms. Our calendar automatically suggests the best posting times based on your audience's real-time engagement data.
+                    </p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden card-shadow">
+<div class="flex items-center justify-between p-stack-md border-b border-outline-variant bg-surface-container-low">
+<div class="flex items-center gap-stack-md">
+<button class="p-2 hover:bg-surface-container-high rounded-full"><span class="material-symbols-outlined">chevron_left</span></button>
+<span class="font-headline-sm text-on-surface">October 2023</span>
+<button class="p-2 hover:bg-surface-container-high rounded-full"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="flex items-center gap-stack-sm">
+<span class="px-stack-sm py-1 bg-surface-container-lowest border border-outline-variant rounded font-label-md text-label-md">Month</span>
+<span class="px-stack-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high">Week</span>
+<span class="px-stack-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high">List</span>
+</div>
+</div>
+<div class="grid grid-cols-7 border-b border-outline-variant">
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low">Mon</div>
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low">Tue</div>
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low">Wed</div>
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low">Thu</div>
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low">Fri</div>
+<div class="p-3 text-center border-r border-outline-variant font-label-md text-label-md text-on-surface-variant bg-surface-container-low text-primary font-bold">Sat</div>
+<div class="p-3 text-center font-label-md text-label-md text-on-surface-variant bg-surface-container-low text-primary font-bold">Sun</div>
+</div>
+<div class="grid grid-cols-7 h-[400px]">
+<!-- Simulate calendar cells -->
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">25</span>
+<div class="bg-primary-container/10 border-l-4 border-primary p-1 rounded">
+<div class="text-[10px] font-bold text-primary truncate">Product Launch #1</div>
+</div>
+</div>
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">26</span>
+</div>
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">27</span>
+<div class="bg-secondary-container/30 border-l-4 border-secondary p-1 rounded">
+<div class="text-[10px] font-bold text-secondary truncate">LinkedIn Update</div>
+</div>
+</div>
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1 bg-surface-bright">
+<span class="text-label-sm font-label-sm text-primary font-bold">28</span>
+<div class="bg-primary text-on-primary p-1 rounded shadow-sm">
+<div class="text-[10px] font-bold truncate">Webinar Blast</div>
+</div>
+<div class="bg-secondary-container/30 border-l-4 border-secondary p-1 rounded">
+<div class="text-[10px] font-bold text-secondary truncate">Team Review</div>
+</div>
+</div>
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">29</span>
+</div>
+<div class="border-r border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">30</span>
+</div>
+<div class="border-b border-outline-variant p-2 flex flex-col gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">31</span>
+</div>
+<!-- Next row simulation -->
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">1</span></div>
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">2</span></div>
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">3</span></div>
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">4</span></div>
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">5</span></div>
+<div class="border-r border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">6</span></div>
+<div class="border-outline-variant p-2 flex flex-col gap-1 bg-surface-container-low opacity-50"><span class="text-label-sm font-label-sm text-on-surface-variant">7</span></div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Section -->
+<section class="bg-primary-container rounded-3xl p-stack-lg text-center overflow-hidden relative mb-20">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-60 h-60 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-stack-md">Ready to scale your content output?</h2>
+<p class="font-body-lg text-body-lg text-white/80 max-w-xl mx-auto mb-stack-lg">
+                        Join 2,500+ enterprises using AuraFlow AI to automate their content strategy and reclaim 20+ hours every week.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-stack-md">
+<button class="bg-white text-primary font-bold px-8 py-3 rounded-xl hover:bg-surface-container-lowest transition-colors active:scale-95 duration-150">
+                            Get Started Now
+                        </button>
+<button class="border border-white/30 text-white font-bold px-8 py-3 rounded-xl hover:bg-white/10 transition-colors active:scale-95 duration-150">
+                            Talk to Sales
+                        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Simple Footer -->
+<footer class="bg-surface-container-highest py-12 px-container-padding-desktop mt-20 border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<span class="text-headline-sm font-bold text-primary">AuraFlow AI</span>
+<p class="text-body-md text-on-surface-variant mt-4">
+                        Modern content orchestration for high-performance teams.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Product</h4>
+<ul class="space-y-2 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="../features_content_ai/code.html">AI Studio</a></li>
+<li><a class="hover:text-primary transition-colors" href="../features_content_ai/code.html">Scheduler</a></li>
+<li><a class="hover:text-primary transition-colors" href="../features_content_ai/code.html">Analytics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Company</h4>
+<ul class="space-y-2 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="../about_us_content_ai/code.html">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="../about_us_content_ai/code.html">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="../about_us_content_ai/code.html">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Legal</h4>
+<ul class="space-y-2 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="../privacy_policy_content_ai/code.html">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="../terms_of_service_content_ai/code.html">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="../features_content_ai/code.html">Security</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>Â© 2023 AuraFlow AI Inc. All rights reserved.</span>
+<div class="flex gap-4 mt-4 md:mt-0">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- FAB (Suppressed on feature details per instructions, but adding for semantic consistency if needed) -->
+<!-- Instruction says suppress FAB on Details/Transactional screens. This is a Feature marketing page. Let's exclude for focus. -->
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Subtle shine effect logic could go here
+            });
+        });
+
+        // Simple Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<style id="aura-hosted-site-styles">
+  .aura-site-map {
+    border-top: 1px solid #c7c4d7;
+    background: #ffffff;
+    color: #191c1e;
+    padding: 28px 24px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .aura-site-map__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .aura-site-map strong {
+    color: #4648d4;
+    font-size: 16px;
+  }
+  .aura-site-map nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .aura-site-map a {
+    color: #464554;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .aura-site-map a:hover {
+    color: #4648d4;
+    text-decoration: underline;
+  }
+</style>
+<section class="aura-site-map" aria-label="Website page links">
+  <div class="aura-site-map__inner">
+    <strong>AuraFlow AI</strong>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../features_content_ai/code.html">Features</a>
+      <a href="../pricing_content_ai/code.html">Pricing</a>
+      <a href="../about_us_content_ai/code.html">About Us</a>
+      <a href="../contact_us_content_ai/code.html">Contact Us</a>
+      <a href="../help_center_content_ai/code.html">Help Center</a>
+      <a href="../privacy_policy_content_ai/code.html">Privacy Policy</a>
+      <a href="../terms_of_service_content_ai/code.html">Terms of Service</a>
+    </nav>
+  </div>
+</section>
+<script id="aura-hosted-site-router">
+(function () {
+  const routes = {"Home":"../index.html","Features":"../features_content_ai/code.html","Pricing":"../pricing_content_ai/code.html","About Us":"../about_us_content_ai/code.html","Contact Us":"../contact_us_content_ai/code.html","Help Center":"../help_center_content_ai/code.html","Privacy Policy":"../privacy_policy_content_ai/code.html","Terms of Service":"../terms_of_service_content_ai/code.html"};
+  const aliases = [
+    [/^(home|logo|auraflow ai|lumina ai)$/i, 'Home'],
+    [/features?|product|products?|solutions?|ai studio|analytics|integrations|dashboard|scheduler|content library|security/i, 'Features'],
+    [/pricing|billing|plans?|enterprise/i, 'Pricing'],
+    [/about|company|careers|blog/i, 'About Us'],
+    [/contact|support|sales|maps|legal|dpo/i, 'Contact Us'],
+    [/help|resources|documentation|docs|api reference|quick start|community|release notes|articles?/i, 'Help Center'],
+    [/privacy/i, 'Privacy Policy'],
+    [/terms/i, 'Terms of Service']
+  ];
+
+  function routeFor(text) {
+    const normalized = (text || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return null;
+    for (const [pattern, route] of aliases) {
+      if (pattern.test(normalized)) return routes[route];
+    }
+    return null;
+  }
+
+  document.querySelectorAll('a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href && href !== '#') return;
+    const route = routeFor(link.textContent || link.getAttribute('aria-label'));
+    if (route) link.setAttribute('href', route);
+  });
+
+  document.querySelectorAll('button').forEach((button) => {
+    const route = routeFor(button.textContent || button.getAttribute('aria-label'));
+    if (!route || button.dataset.auraRouteBound) return;
+    button.dataset.auraRouteBound = 'true';
+    button.addEventListener('click', () => {
+      window.location.href = route;
+    });
+  });
+}());
+</script>
+</body></html>
+

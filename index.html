@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AuraFlow AI - Orchestrate Your Social Presence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-container": "#6063ee", "secondary-container": "#dae2fd", "surface-bright": "#f7f9fb", "secondary-fixed": "#dae2fd", "primary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#2f2ebe", "on-secondary": "#ffffff", "on-surface-variant": "#464554", tertiary: "#4f5f76", "on-secondary-fixed-variant": "#3f465c", "on-secondary-fixed": "#131b2e", "on-primary-fixed": "#07006c", "surface-dim": "#d8dadc", surface: "#f7f9fb", "surface-container": "#eceef0", "inverse-primary": "#c0c1ff", "inverse-on-surface": "#eff1f3", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "on-tertiary-container": "#000510", "on-background": "#191c1e", "surface-tint": "#494bd6", "on-error-container": "#93000a", "on-error": "#ffffff", "outline-variant": "#c7c4d7", "on-tertiary-fixed-variant": "#38485d", outline: "#767586", background: "#f7f9fb", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "on-tertiary-fixed": "#0b1c30", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#bec6e0", "tertiary-container": "#68788f", "primary-fixed-dim": "#c0c1ff", "on-surface": "#191c1e", "tertiary-fixed-dim": "#b7c8e1", "surface-container-low": "#f2f4f6", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", primary: "#4648d4", "on-secondary-container": "#5c647a", error: "#ba1a1a", "surface-variant": "#e0e3e5", secondary: "#565e74", "tertiary-fixed": "#d3e4fe"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {unit: "4px", "stack-sm": "8px", "container-padding-desktop": "32px", "stack-lg": "24px", gutter: "24px", "card-gap": "20px", "stack-md": "16px", "container-padding-mobile": "16px"}, fontFamily: {"label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "28px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+            font-family: 'Inter', sans-serif;
+        }
+        .inner-shine {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+        }
+        .ai-gradient-border {
+            position: relative;
+            background: #ffffff;
+            background-clip: padding-box;
+            border: 1px solid transparent;
+        }
+        .ai-gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #4648d4, #6063ee);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-40 bg-surface dark:bg-surface-dim border-b border-outline-variant flex justify-between items-center h-16 px-container-padding-desktop w-full">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">AuraFlow AI</span>
+</div>
+<div class="hidden md:flex items-center gap-stack-md"><a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md cursor-pointer transition-colors px-2 py-1" href="index.html">Home</a><a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-md text-label-md px-2 py-1 rounded" href="features_content_ai/code.html">Features</a><a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-md text-label-md px-2 py-1 rounded" href="pricing_content_ai/code.html">Pricing</a><a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-md text-label-md px-2 py-1 rounded" href="about_us_content_ai/code.html">About</a><a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-md text-label-md px-2 py-1 rounded" href="help_center_content_ai/code.html">Help</a><a class="text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-md text-label-md px-2 py-1 rounded" href="contact_us_content_ai/code.html">Contact</a></div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden md:flex items-center gap-unit text-on-surface-variant cursor-pointer hover:bg-surface-container-low p-2 rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<a class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg inner-shine hover:opacity-90 transition-opacity active:scale-95" href="pricing_content_ai/code.html">Get Started</a>
+</div>
+</nav>
+<main class="pt-16 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-container-padding-desktop py-stack-lg">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary-container rounded-full blur-[100px]"></div>
+</div>
+<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center z-10">
+<div class="space-y-stack-lg">
+<div class="inline-flex items-center gap-unit px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full border border-primary-container/20">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">AI-Powered Content Engine</span>
+</div>
+<h1 class="font-headline-lg text-[48px] lg:text-[64px] leading-tight tracking-tight text-on-surface">
+                        Orchestrate Your <br/> <span class="text-primary">Social Presence</span> with AI
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[540px]">
+                        The ultimate B2B command center for content orchestration. Generate, schedule, and analyze your social ecosystem across LinkedIn, X, and Instagram from a single, intelligent workspace.
+                    </p>
+<div class="flex flex-wrap gap-stack-md pt-stack-sm">
+<a class="bg-primary text-on-primary font-headline-sm text-headline-sm px-8 py-4 rounded-xl inner-shine shadow-lg active:scale-95 transition-all" href="pricing_content_ai/code.html">Get Started for Free</a>
+<a class="bg-surface-container-lowest border border-outline-variant text-on-surface font-headline-sm text-headline-sm px-8 py-4 rounded-xl hover:bg-surface-container-low active:scale-95 transition-all flex items-center gap-unit" href="features_content_ai/code.html">
+<span class="material-symbols-outlined">play_circle</span>
+                            Watch Demo
+                        </a></div><div class="flex items-center gap-stack-md pt-stack-md text-on-surface-variant">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Close up portrait of a professional female marketing executive in a modern office environment, warm sunlight, soft focus background, high-end photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKmby36D-fMaJ7mqz3ZaV6ijE1tJuQjsa34fRk68_nUzWSfeZNGdBU-tdPpZsVrs7Hwnu06cmWY6Y9sNoBPFiPQfAcqpstTfZoSXUro1tbqWmWQSm2k9OOAaGrNi1ulC8sB-u41ZXuG4F5NDOBGLm7AUHM0W_dvvXfQUKWU1C6JEZzLNA4P9gNa6R_WkuYX2BczCqvp-lNZR0N5yQ_0OWAAV-REpArPkW1DDHqxp7OtDiK2xePmfYnQSTFlV9LiybTQWGuXfk1P0Kk"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Close up portrait of a male tech founder in a creative studio, natural daylight, soft professional lighting, vibrant and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7C2AfqTvNchvd17GdomTUj0x0ZEXKtNhoMaWS4h62sPDdN2siZm8w5fX4KDVBYtuyRyASTBH_ZPC8PRUB4YEJltG-7Vqqbt98y326j9zt7HyqlJYRHdQbd9m0hkOGuX-Spgytl8k5vp-eJDLgomHahm14kER6BBXIrIUS2j4k2Ckbm0i5a6p-iHvrd7romqpTA69R49QuMrq5z-Uoc61Tn8ZG7KHYiVRXFvSNFBGup4sg3RigPrm_AgrKmxoaci8maRw9-LZwv1W"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Close up portrait of a young entrepreneur in a minimalist white workspace, looking confident, soft global illumination, professional digital camera style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM0D0gnOBDAWdyz7-ncj5HtfUpIW5VeAxGEExzXwuYPWS8zmWFk84U-nAUfYNvTouzKCwdte3-yWu7ByHB3s4Pb7RzhIVglNHTmRPc6TUDmsq2hdj_RVlZPmiZjAszy2a5bExK2Fn6GJmE_NHHaPY_1BMXd-REo0samgiy1407ZNSrCcxLOUBrhW6MVUssY9fRrp8sHJ6r6H3lcSiEURdLEhPdmOjfMzPUnh-N77kxpEM_Wtvcxhy000FvlYvp-w4hMdVQxLiSwz7y"/>
+</div>
+<p class="font-label-md text-label-md">Trusted by 2,000+ content creators</p>
+</div>
+</div>
+<div class="relative mt-stack-lg lg:mt-0">
+<div class="bg-surface-container-lowest p-unit rounded-2xl border border-outline-variant shadow-2xl overflow-hidden transform lg:rotate-3 transition-transform hover:rotate-0 duration-700">
+<div class="bg-surface-container h-8 w-full flex items-center px-4 gap-unit border-b border-outline-variant">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></div>
+</div>
+<img class="w-full h-auto" data-alt="A sophisticated digital dashboard interface showing social media analytics charts, content calendar views, and performance metrics. The UI is clean, light-mode, with a palette of deep indigo and soft grays. The lighting is digital and crisp, emphasizing data visualization clarity in a professional software environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBinzQCs0gGMjZxmXuw5IBWQUqobs2YsYb432UqJ-X9zQwI6aubhM7Y36PsV7LcSR4URSfcRqDJBn8S9Hx4fR-cS9KjWHlJqGP6lUP_EI_MAy69Kif5pVclKoeFzEMYfPTsmF71MCaQgKGyXnoo_wC46HHw1X8OePimmjLcLFXMJryxviKJrykBSi5bg9pzOc9NvWhBugXO5ShN4OKkhQ24zTQuCZGDwr10fHN4k1xWtQejF70xWzyz9z4IGlLB2qZEmalrSwDMMUE"/>
+</div>
+<!-- Floating AI Tag -->
+<div class="absolute -bottom-6 -left-6 bg-surface p-4 rounded-xl shadow-xl border border-primary/20 flex items-center gap-stack-sm ai-gradient-border">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Aura Assistant</p>
+<p class="font-body-md text-body-md">Post engagement is up 24%</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Platforms -->
+<section class="py-stack-lg bg-surface-container-low border-y border-outline-variant">
+<div class="container mx-auto px-container-padding-desktop flex flex-wrap justify-center items-center gap-gutter opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary text-[32px]">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">LinkedIn</span>
+</div>
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary text-[32px]">close</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">X / Twitter</span>
+</div>
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary text-[32px]">camera</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Instagram</span>
+</div>
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary text-[32px]">play_arrow</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">YouTube</span>
+</div>
+<div class="flex items-center gap-unit">
+<span class="material-symbols-outlined text-primary text-[32px]">brand_awareness</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">TikTok</span>
+</div>
+</div>
+</section>
+<!-- How it Works: Bento Grid Layout -->
+<section class="py-32 px-container-padding-desktop">
+<div class="container mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Seamless Content Flow</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[600px] mx-auto">From strategic planning to automated delivery, AuraFlow manages the entire content lifecycle.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-card-gap">
+<!-- Step 1: Connect -->
+<div class="group bg-surface-container-lowest p-stack-lg rounded-2xl border border-outline-variant hover:border-primary/40 transition-all hover:shadow-xl flex flex-col gap-stack-md">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">link</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">1. Connect</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Integrate your entire social ecosystem in seconds. AuraFlow maps your brand voice across every touchpoint.</p>
+<div class="mt-auto pt-stack-md">
+<img class="rounded-lg grayscale group-hover:grayscale-0 transition-all" data-alt="A clean top-down shot of a workspace with a smartphone and a laptop connected via cables on a white desk, symbolizing integration. Minimalist aesthetic, high-key lighting, soft shadows, professional corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANo_nQIGAVfp3uIyuKNMNY3G1nnvOd4JV7fbhP1r01rolo68rMyqeabR9KzW4GqKSvLNUIhjlSaOMwJphX2qvSFdk5V2NHX98eyTn5kHcEbf4ysTRaXm1AEGHI9oEVNEK5Gz08rm4mEQHUssemKmqxkAokRvdNqD8IiqB3qfyMWJ12JamPdr_qXMVz1mR-_iOGxfIpBVPXEIW0RlsQnaXV07IVTiFD9dai3GW8WMszDmNVgyP-bM61ArHvDt1L8zHdutA2zId87O8H"/>
+</div>
+</div>
+<!-- Step 2: Generate -->
+<div class="group bg-primary-container text-on-primary-container p-stack-lg rounded-2xl border border-primary/20 shadow-lg flex flex-col gap-stack-md relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-[160px]">auto_awesome</span>
+</div>
+<div class="w-12 h-12 bg-on-primary-container text-primary-container rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">2. Generate</h3>
+<p class="font-body-md text-body-md opacity-90">AI-powered creation that sounds like you. Generate weeks of platform-specific content in a single click.</p>
+<div class="mt-auto pt-stack-md bg-white/10 p-stack-sm rounded-lg border border-white/20">
+<div class="flex items-center gap-unit mb-2">
+<div class="w-2 h-2 rounded-full bg-on-primary-container animate-pulse"></div>
+<span class="text-label-sm font-label-sm uppercase">Drafting for LinkedIn...</span>
+</div>
+<div class="h-2 w-3/4 bg-white/20 rounded-full mb-1"></div>
+<div class="h-2 w-full bg-white/20 rounded-full mb-1"></div>
+<div class="h-2 w-1/2 bg-white/20 rounded-full"></div>
+</div>
+</div>
+<!-- Step 3: Schedule -->
+<div class="group bg-surface-container-lowest p-stack-lg rounded-2xl border border-outline-variant hover:border-primary/40 transition-all hover:shadow-xl flex flex-col gap-stack-md">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">3. Schedule</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Set and forget. Our smart scheduler finds the peak engagement window for each platform automatically.</p>
+<div class="mt-auto pt-stack-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between p-2 bg-surface-container rounded border border-outline-variant">
+<span class="text-label-sm font-label-sm">Post to X</span>
+<span class="text-label-sm font-label-sm text-primary">10:00 AM</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded border border-outline-variant">
+<span class="text-label-sm font-label-sm">Insta Reel</span>
+<span class="text-label-sm font-label-sm text-primary">02:15 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-32 bg-surface-container-lowest overflow-hidden">
+<div class="container mx-auto px-container-padding-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Trusted by Global <br/> Content Leaders</h2>
+<div class="space-y-stack-lg">
+<div class="glass-card p-stack-lg rounded-2xl border-l-4 border-l-primary relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-primary opacity-20 text-[64px]">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-stack-md">
+                                    "AuraFlow transformed our content strategy. What used to take a team of three an entire week now takes one person just two hours of orchestration. The AI brand voice matching is uncanny."
+                                </p>
+<div class="flex items-center gap-stack-md">
+<img class="w-12 h-12 rounded-full border border-outline-variant" data-alt="Portrait of a male corporate executive in a sharp business suit, bright and clear professional lighting, minimalist background with cool tones, 8k resolution style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgAyIu9wpr6Roz9EpWZHpEe2hfpX1Ocd95IZ3L1QWehmTGq1NcX4P9TnoCh6uRQjv5LrWUs1lCgFBACxrqlLXFNNWorDpjgu5Dit0ZP6nz5S_f4p51bVzzGRSAO1H2cc4vPaH5PGslVfM6tGlGSJHo2O1NHTx0f7Gh732o2g_gjZKQHEuQdMN9xyfw6pZ7ErS_u9TNpVTBDJddETEIUy2zOcuZw7iKBnmgbvEJtLTbQ3UvTZzUQRwc27_1duf8YjsEXXww-Bf3pVWb"/>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface">Marcus Chen</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Head of Growth, NexaMedia</p>
+</div>
+</div>
+</div>
+<div class="flex gap-stack-lg items-center pt-stack-md">
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-primary">98%</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Efficiency Gain</p>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-primary">12M+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Posts Orchestrated</p>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-primary">4.9/5</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">User Rating</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center">
+<div class="w-full max-w-[500px] h-[500px] bg-primary-fixed rounded-full flex items-center justify-center p-stack-lg relative">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<img class="w-full h-full object-cover rounded-full shadow-2xl border-4 border-white" data-alt="A diverse group of modern professionals collaborating in a high-tech, sunlit office space. The image captures a sense of movement and energy, with clean white surfaces and blue accent colors. High-energy corporate lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QDSw6-WIRcbXipbhvJhIx0apw7uXqvglJyXSrbWwuugggry8LbAEV_E--PCT4i9M0eF7Dy58Fpq3vDLuLYmpht7aRFbf19IbLskJ19gn4u-UdkT50fqMKC_Z8MqsM02BIjl7hHw3SVCBGHh-_SgBTEnAq1VFV8bHgEM0M1U_3nr6DHqFERzHQp4NOWV1KODvUb6eLgosj6WP09c34Kl8OS9l-P0T11_ap4WX5LDGTTNYtcTenQYSLsMgd3ceS7IweIMMPDvvvKCY"/>
+<!-- Floating Status -->
+<div class="absolute top-10 -right-10 bg-white p-3 rounded-lg shadow-lg border border-outline-variant flex items-center gap-2">
+<div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+<span class="font-label-md text-label-md">Live Analytics Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 relative overflow-hidden bg-on-surface">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary rounded-full blur-[150px]"></div>
+</div>
+<div class="container mx-auto px-container-padding-desktop relative z-10 text-center">
+<h2 class="font-headline-lg text-[40px] lg:text-[56px] text-on-primary-container mb-stack-md">Ready to Scale Your Influence?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container opacity-80 max-w-[600px] mx-auto mb-stack-lg">Join thousands of companies orchestrating their future with AuraFlow AI. No credit card required.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-stack-md">
+<button class="bg-primary-container text-on-primary-container font-headline-sm text-headline-sm px-10 py-5 rounded-xl inner-shine hover:scale-105 transition-all">Start Your Free Trial</button>
+<button class="bg-transparent border border-outline-variant text-on-primary-container font-headline-sm text-headline-sm px-10 py-5 rounded-xl hover:bg-white/10 transition-all">Schedule a Demo</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-stack-lg border-t border-outline-variant px-container-padding-desktop">
+<div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-gutter mb-stack-lg">
+<div class="col-span-2 lg:col-span-1">
+<span class="text-headline-md font-headline-md font-bold text-primary">AuraFlow AI</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm max-w-[240px]">The intelligent content orchestration engine for modern social teams.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-stack-sm">Product</h4>
+<ul class="space-y-unit">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="features_content_ai/code.html">Features</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="features_content_ai/code.html">Integrations</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="pricing_content_ai/code.html">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-stack-sm">Company</h4>
+<ul class="space-y-unit">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="about_us_content_ai/code.html">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="about_us_content_ai/code.html">Blog</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="about_us_content_ai/code.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-stack-sm">Connect</h4>
+<div class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">hub</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">close</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">camera</span>
+</div>
+</div>
+</div>
+<div class="container mx-auto pt-stack-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Â© 2024 AuraFlow AI. All rights reserved.</p>
+<div class="flex gap-stack-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="privacy_policy_content_ai/code.html">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="terms_of_service_content_ai/code.html">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Select elements to animate
+            const animatableElements = document.querySelectorAll('.group, .container > div');
+            animatableElements.forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+<style id="aura-hosted-site-styles">
+  .aura-site-map {
+    border-top: 1px solid #c7c4d7;
+    background: #ffffff;
+    color: #191c1e;
+    padding: 28px 24px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .aura-site-map__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .aura-site-map strong {
+    color: #4648d4;
+    font-size: 16px;
+  }
+  .aura-site-map nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .aura-site-map a {
+    color: #464554;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .aura-site-map a:hover {
+    color: #4648d4;
+    text-decoration: underline;
+  }
+</style>
+<section class="aura-site-map" aria-label="Website page links">
+  <div class="aura-site-map__inner">
+    <strong>AuraFlow AI</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features_content_ai/code.html">Features</a>
+      <a href="pricing_content_ai/code.html">Pricing</a>
+      <a href="about_us_content_ai/code.html">About Us</a>
+      <a href="contact_us_content_ai/code.html">Contact Us</a>
+      <a href="help_center_content_ai/code.html">Help Center</a>
+      <a href="privacy_policy_content_ai/code.html">Privacy Policy</a>
+      <a href="terms_of_service_content_ai/code.html">Terms of Service</a>
+    </nav>
+  </div>
+</section>
+<script id="aura-hosted-site-router">
+(function () {
+  const routes = {"Home":"index.html","Features":"features_content_ai/code.html","Pricing":"pricing_content_ai/code.html","About Us":"about_us_content_ai/code.html","Contact Us":"contact_us_content_ai/code.html","Help Center":"help_center_content_ai/code.html","Privacy Policy":"privacy_policy_content_ai/code.html","Terms of Service":"terms_of_service_content_ai/code.html"};
+  const aliases = [
+    [/^(home|logo|auraflow ai|lumina ai)$/i, 'Home'],
+    [/features?|product|products?|solutions?|ai studio|analytics|integrations|dashboard|scheduler|content library|security/i, 'Features'],
+    [/pricing|billing|plans?|enterprise/i, 'Pricing'],
+    [/about|company|careers|blog/i, 'About Us'],
+    [/contact|support|sales|maps|legal|dpo/i, 'Contact Us'],
+    [/help|resources|documentation|docs|api reference|quick start|community|release notes|articles?/i, 'Help Center'],
+    [/privacy/i, 'Privacy Policy'],
+    [/terms/i, 'Terms of Service']
+  ];
+
+  function routeFor(text) {
+    const normalized = (text || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return null;
+    for (const [pattern, route] of aliases) {
+      if (pattern.test(normalized)) return routes[route];
+    }
+    return null;
+  }
+
+  document.querySelectorAll('a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href && href !== '#') return;
+    const route = routeFor(link.textContent || link.getAttribute('aria-label'));
+    if (route) link.setAttribute('href', route);
+  });
+
+  document.querySelectorAll('button').forEach((button) => {
+    const route = routeFor(button.textContent || button.getAttribute('aria-label'));
+    if (!route || button.dataset.auraRouteBound) return;
+    button.dataset.auraRouteBound = 'true';
+    button.addEventListener('click', () => {
+      window.location.href = route;
+    });
+  });
+}());
+</script>
+</body></html>
+
+
